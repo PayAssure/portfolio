@@ -1,44 +1,92 @@
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <footer className="mt-12 border-t bg-white">
-      <div className="w-full mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
+    <footer className="w-full bg-slate-950 text-slate-400">
+      {/* Main footer body */}
+      <div className="px-8 pt-14 pb-10 grid gap-12 lg:grid-cols-[2fr_1fr_1fr_1fr]">
+        {/* Brand column */}
+        <div className="flex flex-col gap-5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-600 rounded-md flex items-center justify-center text-white font-bold">P</div>
+            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-lg font-bold text-white shadow-lg shadow-blue-900/40">
+              P
+            </div>
             <div>
-              <div className="font-semibold">PayAssure</div>
-              <div className="text-sm text-gray-500">Software Development</div>
+              <div className="text-base font-bold text-white tracking-tight">PayAssure</div>
+              <div className="text-xs text-slate-500 mt-0.5">Supply Chain Financial Intelligence</div>
             </div>
           </div>
-          <p className="mt-4 text-sm text-gray-600">We deliver reliable software engineering services focused on outcomes and security.</p>
+          <p className="text-sm leading-6 text-slate-400 max-w-xs">
+            A platform designed to make African supply chains more reliable, transparent, and finance-ready — from manufacturer to retailer.
+          </p>
+          <div className="flex items-center gap-1 text-xs text-slate-600 mt-1">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span>Operational · Mombasa, Kenya</span>
+          </div>
         </div>
 
+        {/* Product column */}
         <div>
-          <div className="font-semibold">Company</div>
-          <ul className="mt-3 text-sm text-gray-600 space-y-2">
-            <li><a href="#about" className="hover:text-blue-600">About</a></li>
-            <li><a href="#services" className="hover:text-blue-600">Services</a></li>
-            <li><a href="#projects" className="hover:text-blue-600">Projects</a></li>
+          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-5">Product</div>
+          <ul className="space-y-3 text-sm">
+            <li><a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="#industries" className="hover:text-white transition-colors">Industries</a></li>
+            <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
+            <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
           </ul>
         </div>
 
+        {/* Company column */}
         <div>
-          <div className="font-semibold">Contact</div>
-          <div className="mt-3 text-sm text-gray-600 space-y-2">
-            <div>Email: hello@payassure.com</div>
-            <div>Phone: +1 (555) 123-4567</div>
-            <div className="flex items-center gap-3 mt-3">
-              <a href="#" className="text-gray-500 hover:text-blue-600">Twitter</a>
-              <a href="#" className="text-gray-500 hover:text-blue-600">LinkedIn</a>
+          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-5">Company</div>
+          <ul className="space-y-3 text-sm">
+            <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
+            <li><a href="#team" className="hover:text-white transition-colors">Team</a></li>
+            <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+            <li><a href="#investors" className="hover:text-white transition-colors">Investors</a></li>
+          </ul>
+        </div>
+
+        {/* Contact column */}
+        <div>
+          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 mb-5">Get in Touch</div>
+          <div className="space-y-3 text-sm">
+            <div className="flex items-start gap-2">
+              <span className="mt-0.5 text-blue-500">✉</span>
+              <a href="mailto:info@payassure.co.ke" className="hover:text-white transition-colors">info@payassure.co.ke</a>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-0.5 text-blue-500">✆</span>
+              <a href="tel:+254791614036" className="hover:text-white transition-colors">+254 791 614 036</a>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-0.5 text-blue-500">⌖</span>
+              <span>Mombasa, Kenya</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="border-t bg-white/90">
-        <div className="max-w-6xl mx-auto px-6 py-4 text-sm text-gray-500 flex items-center justify-between">
-          <div>© PayAssure — All rights reserved</div>
-          <div className="text-xs">Made with care · Privacy · Terms</div>
+      {/* Divider */}
+      <div className="border-t border-slate-800 mx-8" />
+
+      {/* Bottom bar */}
+      <div className="px-8 py-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between text-xs text-slate-600">
+        <div className="flex items-center gap-1.5">
+          <span>©</span>
+          <span>{currentYear} PayAssure Limited. All rights reserved.</span>
+        </div>
+
+        <div className="flex items-center gap-5">
+          <a href="/privacy" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <span className="text-slate-800">·</span>
+          <a href="/terms" className="hover:text-slate-400 transition-colors">Terms of Service</a>
+          <span className="text-slate-800">·</span>
+          <a href="/cookies" className="hover:text-slate-400 transition-colors">Cookie Policy</a>
+        </div>
+
+        <div className="text-slate-700">
+          Reg. No. · Nairobi, Kenya
         </div>
       </div>
     </footer>
