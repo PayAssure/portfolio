@@ -1,13 +1,13 @@
 export default function TransactionFlowSection() {
   return (
-    <section id="transaction-flow" className="w-full py-16">
-      <div className="w-full space-y-4 mb-16">
+    <section id="transaction-flow" className="w-full py-5">
+      <div className="w-full space-y-4 mb-3">
         <p className="text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">Instant Splits</p>
         <h2 className="text-4xl lg:text-5xl font-bold text-slate-950">See Money Split in Real-Time</h2>
         <p className="text-lg text-gray-600 max-w-2xl">Every transaction is instantly verified, split, and settled. No delays. No manual reconciliation.</p>
       </div>
 
-      <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-blue-50 p-12 shadow-lg">
+      <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-blue-50 px-4 py-8 sm:px-6 sm:py-12 lg:p-12 shadow-lg">
         <div className="space-y-6">
           {/* Transaction header */}
           <div className="rounded-xl bg-white border border-slate-200 p-6 shadow-sm">

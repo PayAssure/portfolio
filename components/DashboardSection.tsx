@@ -1,13 +1,13 @@
 export default function DashboardSection() {
   return (
-    <section id="dashboard" className="w-full py-16">
+    <section id="dashboard" className="w-full py-5">
       <div className="w-full space-y-4 mb-16">
         <p className="text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">Platform Overview</p>
         <h2 className="text-4xl lg:text-5xl font-bold text-slate-950">The PayAssure Dashboard</h2>
         <p className="text-lg text-gray-600 max-w-2xl">Enterprise-grade visibility into every settlement, trust score, and financial flow.</p>
       </div>
 
-      <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg overflow-hidden">
+      <div className="rounded-3xl border border-slate-200 bg-white px-4 py-6 sm:p-8 shadow-lg overflow-hidden">
         {/* Dashboard Header */}
         <div className="flex items-center justify-between mb-8 pb-8 border-b border-slate-200">
           <div>

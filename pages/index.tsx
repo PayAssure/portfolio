@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
-import MetricsSection from '../components/MetricsSection'
 import TransactionFlowSection from '../components/TransactionFlowSection'
 import ArchitectureSection from '../components/ArchitectureSection'
 import EcosystemSection from '../components/EcosystemSection'
@@ -32,22 +31,21 @@ export default function Home() {
         <Header />
         <main className="w-full space-y-16 pt-24 px-6 md:px-8 lg:px-12 mx-auto">
           <Hero />
-          <MetricsSection />
-          <TransactionFlowSection />
-          <ArchitectureSection />
-          <EcosystemSection />
           <TrustBanner />
           <ProblemSection />
           <SolutionSection />
-          <HowItWorksSection />
-          <FeaturesSection />
           <IndustriesSection />
+          <HowItWorksSection />
+          <TransactionFlowSection />
+          <EcosystemSection />
+          <ArchitectureSection />
+          <FeaturesSection />
           <TrustIntelligenceSection />
           <TrustScoreSection />
+          <DashboardSection />
           <SecuritySection />
           <IntegrationsSection />
           <RoadmapSection />
-          <DashboardSection />
           <AboutSection />
           <ContactSection />
         </main>

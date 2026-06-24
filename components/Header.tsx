@@ -15,14 +15,15 @@ export default function Header() {
 
   return (
     <header className="w-full fixed inset-x-0 top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur-xl shadow-sm">
-      <div className="flex w-full items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-950 text-lg font-bold text-white">P</div>
-          <div>
-            <div className="text-sm font-semibold text-slate-950">PayAssure</div>
-            <div className="text-xs text-slate-500">Supply Chain Finance</div>
+      <div className="flex w-full items-center justify-between px-6 py-2">
+          <div className="flex-none h-23 w-85 md:h-20 md:w-80 overflow-hidden rounded-md">
+            <img
+              src="/payassure-logo.png"
+              alt="PayAssure"
+              className="h-full w-full object-cover transform scale-70 md:scale-100"
+            />
           </div>
-        </Link>
+ 
 
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (

@@ -60,15 +60,15 @@ export default function HowItWorksSection() {
   const slotWidthPercent = cardWidthPercent + GAP_PERCENT
 
   return (
-    <section id="how-it-works" className="w-full rounded-xl bg-white p-10 shadow-sm border border-slate-200">
+    <section id="how-it-works" className="w-full rounded-xl bg-white px-4 py-6 sm:p-10 shadow-sm border border-slate-200">
       {/* Header */}
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between mb-10">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between mb-7 lg:mb-7">
         <div>
           <p className="text-sm uppercase tracking-[0.3em] text-blue-600 font-semibold">How It Works</p>
           <h2 className="mt-3 text-4xl font-bold text-slate-950">Transaction flow across the supply chain</h2>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 lg:justify-end justify-end">
           <button
             type="button"
             onClick={handlePrev}
@@ -113,7 +113,7 @@ export default function HowItWorksSection() {
                     {index + 1}
                   </div>
                   <div className="mt-6 text-lg font-semibold text-slate-950">{step.title}</div>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{step.description}</p>
+                  <p className="mt-3 text-xs sm:text-sm leading-6 text-slate-600">{step.description}</p>
                 </div>
 
                 {/* Arrow — lives in the gap space, never overlaps the card */}

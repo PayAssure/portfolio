@@ -21,8 +21,8 @@ export default function ArchitectureSection() {
   ]
 
   return (
-    <section id="architecture" className="w-full py-16">
-      <div className="w-full space-y-4 mb-16">
+    <section id="architecture" className="w-full py-5">
+      <div className="w-full space-y-4 mb-8">
         <p className="text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">3-Layer Foundation</p>
         <h2 className="text-4xl lg:text-5xl font-bold text-slate-950">Enterprise Architecture</h2>
         <p className="text-lg text-gray-600 max-w-2xl">PayAssure's 3-layer architecture handles instant settlements, daily float, and supply chain financing.</p>

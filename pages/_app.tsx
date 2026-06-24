@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Header />
-      <main className="pt-24">
+      <main className="pt-2">
         <Component {...pageProps} />
       </main>
       <Footer />

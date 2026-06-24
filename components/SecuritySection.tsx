@@ -17,14 +17,14 @@ const colorClasses = {
 export default function SecuritySection() {
   return (
     <section id="security" className="w-full">
-      <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+      <div className="rounded-3xl border border-slate-200 bg-white px-4 py-6 sm:p-8 shadow-sm">
         <div className="space-y-4 pb-8 border-b border-slate-200">
           <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 font-semibold">Enterprise Security</p>
           <h2 className="text-4xl font-bold text-slate-950">Bank-grade controls for payments and data</h2>
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
           {securityItems.map((item) => (
-            <div key={item.title} className={`rounded-lg border p-6 shadow-sm hover:shadow-md transition ${colorClasses[item.color as keyof typeof colorClasses]}`}>
+            <div key={item.title} className={`rounded-lg border px-4 py-4 sm:p-6 shadow-sm hover:shadow-md transition ${colorClasses[item.color as keyof typeof colorClasses]}`}>
               <h3 className="text-lg font-semibold text-slate-950">{item.title}</h3>
               <p className="mt-3 text-sm text-gray-600">{item.detail}</p>
             </div>

@@ -7,7 +7,7 @@ export default function TrustScoreSection() {
   ]
 
   return (
-    <section id="trust-score" className="w-full py-16">
+    <section id="trust-score" className="w-full py-5">
       <div className="w-full space-y-4 mb-16">
         <p className="text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">Behavioral Scoring</p>
         <h2 className="text-4xl lg:text-5xl font-bold text-slate-950">Trust Score: Your Supply Chain Reputation</h2>

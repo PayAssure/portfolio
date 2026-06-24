@@ -51,8 +51,8 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full py-10">
-      <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+    <section id="contact" className="w-full py-5">
+      <div className="rounded-3xl border border-slate-200 bg-white px-4 py-6 sm:p-8 shadow-sm">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           {/* Left Side - Content */}
           <div className="space-y-2">
@@ -89,7 +89,7 @@ export default function ContactSection() {
           </div>
 
           {/* Right Side - Form */}
-          <form onSubmit={handleSubmit} className="space-y-4 rounded-xl border border-slate-200 bg-slate-50 p-8">
+          <form onSubmit={handleSubmit} className="space-y-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-6 sm:p-8">
             <h3 className="text-lg font-bold text-slate-950 mb-6">Send us a message</h3>
 
             {status === 'success' && (
