@@ -25,6 +25,8 @@ export default function Home() {
     <>
       <Head>
         <title>PayAssure — Supply Chain Financial Intelligence</title>
+        <link rel="icon" type="image/png" href="/logo.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
       </Head>
 
       <div className="w-full min-h-screen bg-white text-slate-900">

@@ -68,7 +68,7 @@ export default function ContactSection() {
                 <div className="text-2xl">✉️</div>
                 <div>
                   <p className="text-sm font-semibold text-slate-950">Email</p>
-                  <p className="text-sm text-blue-600">hello@payassure.co.ke</p>
+                  <p className="text-sm text-blue-600">info@payassure.co.ke</p>
                 </div>
               </a>
               <a href="tel:+254700000000" className="flex items-center gap-4 p-4 rounded-lg border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 transition">

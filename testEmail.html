@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New PayAssure Inquiry</title>
+</head>
+
+<body style="margin:0;padding:0;background:#f8fafc;font-family:Inter,Arial,sans-serif;color:#0f172a;">
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f8fafc;padding:40px 20px;">
+        <tr>
+            <td align="center">
+
+                <table width="680" cellpadding="0" cellspacing="0" border="0"
+                    style="background:#ffffff;border:1px solid #e2e8f0;border-radius:20px;overflow:hidden;">
+
+                    <tr>
+                        <td style="background:#0B1F3A;padding:32px 40px;">
+
+<div style="text-align:center;">
+                      <img src="https://payassure.netlify.app/payassure-logo.png" alt="PayAssure"
+                        style="height:42px;display:inline-block;" />
+                    </div>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:40px;">
+
+                            <div
+                                style="display:inline-block;background:#dcfce7;color:#166534;padding:8px 14px;border-radius:999px;font-size:12px;font-weight:700;">
+                                NEW WEBSITE INQUIRY
+                            </div>
+
+                            <h1 style="margin:20px 0 16px;font-size:30px;color:#0f172a;">
+                                New Inquiry Received
+                            </h1>
+
+                            <p style="margin:0;font-size:15px;line-height:1.8;color:#475569;">
+                                A new inquiry has been submitted through the PayAssure website. Review the information
+                                below and determine the appropriate follow-up action.
+                            </p>
+                            <p style="margin:18px 0 0;font-size:14px;line-height:1.75;color:#94a3b8;">
+                                Recommended next steps: validate the inquiry, assign the appropriate team, and contact the prospect within 24 hours.
+                            </p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:0 40px 30px;">
+
+                            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:20px;">
+
+                                <table width="100%" cellpadding="0" cellspacing="0">
+
+                                    <tr>
+                                        <td style="padding:8px 0;color:#64748b;font-size:13px;">Source</td>
+                                        <td style="padding:8px 0;color:#0f172a;font-size:13px;font-weight:600;">Website
+                                            Contact Form</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="padding:8px 0;color:#64748b;font-size:13px;">Status</td>
+                                        <td style="padding:8px 0;color:#10b981;font-size:13px;font-weight:700;">NEW</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="padding:8px 0;color:#64748b;font-size:13px;">Received At</td>
+                                        <td style="padding:8px 0;color:#0f172a;font-size:13px;font-weight:600;">
+                                            ${new Date().toLocaleString()}
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="padding:8px 0;color:#64748b;font-size:13px;">Priority</td>
+                                        <td style="padding:8px 0;color:#0f172a;font-size:13px;font-weight:600;">High</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="padding:8px 0;color:#64748b;font-size:13px;">Action</td>
+                                        <td style="padding:8px 0;color:#0f172a;font-size:13px;font-weight:600;">Assign to sales and respond within 24 hours</td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:0 40px 40px;">
+
+                            <div style="border:1px solid #e2e8f0;border-radius:16px;padding:24px;">
+
+                                <h3 style="margin:0 0 20px;font-size:18px;">
+                                    Inquiry Information
+                                </h3>
+
+                                ${Object.entries(formData)
+                                .map(
+                                ([key,value]) => `
+                                <div style="padding:14px 0;border-bottom:1px solid #f1f5f9;">
+                                    <div style="font-size:12px;font-weight:700;color:#64748b;text-transform:uppercase;">
+                                        ${key}
+                                    </div>
+                                    <div style="margin-top:6px;font-size:15px;color:#0f172a;">
+                                        ${value}
+                                    </div>
+                                </div>
+                                `
+                                )
+                                .join("")}
+
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:0 40px 40px;">
+
+                            <a href="mailto:${formData.email}" style="
+display:inline-block;
+background:#0B1F3A;
+color:#ffffff;
+text-decoration:none;
+padding:14px 24px;
+border-radius:12px;
+font-weight:600;
+">
+                                Reply To Inquiry
+                            </a>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="border-top:1px solid #e2e8f0;padding:24px 40px;text-align:center;">
+
+                            <p style="margin:0;font-size:13px;color:#64748b;">
+                                PayAssure Internal Notification System
+                            </p>
+
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
