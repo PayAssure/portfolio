@@ -38,7 +38,7 @@ export default function Home() {
         <meta property="og:url" content="https://payassure.co.ke/" />
         <meta property="og:title" content="PayAssure — Supply Chain Financial Intelligence" />
         <meta property="og:description" content="Real-time supply chain financial intelligence and trade finance solutions for modern enterprises." />
-        <meta property="og:image" content="https://payassure.com/og-image.png" />
+        <meta property="og:image" content="https://payassure.co.ke/og-image.png" />
         <meta property="og:site_name" content="PayAssure" />
         <meta property="og:locale" content="en_US" />
         
@@ -47,7 +47,7 @@ export default function Home() {
         <meta property="twitter:url" content="https://payassure.co.ke/" />
         <meta property="twitter:title" content="PayAssure — Supply Chain Financial Intelligence" />
         <meta property="twitter:description" content="Real-time supply chain financial intelligence and trade finance solutions for modern enterprises." />
-        <meta property="twitter:image" content="https://payassure.com/twitter-image.png" />
+        <meta property="twitter:image" content="https://payassure.co.ke/twitter-image.png" />
         
         {/* LinkedIn */}
         <meta property="linkedin:title" content="PayAssure — Supply Chain Financial Intelligence" />
