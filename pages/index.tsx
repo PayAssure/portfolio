@@ -3,10 +3,12 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import TransactionFlowSection from '../components/TransactionFlowSection'
+import TransactionFeeSection from '../components/TransactionFeeSection'
 import ArchitectureSection from '../components/ArchitectureSection'
 import EcosystemSection from '../components/EcosystemSection'
 import TrustBanner from '../components/TrustBanner'
 import ProblemSection from '../components/ProblemSection'
+import RetailCreditCrisisSection from '../components/RetailCreditCrisisSection'
 import SolutionSection from '../components/SolutionSection'
 import HowItWorksSection from '../components/HowItWorksSection'
 import FeaturesSection from '../components/FeaturesSection'
@@ -19,6 +21,9 @@ import RoadmapSection from '../components/RoadmapSection'
 import DashboardSection from '../components/DashboardSection'
 import AboutSection from '../components/AboutSection'
 import ContactSection from '../components/ContactSection'
+import PilotCTASection from '../components/PilotCTASection'
+import TeamSection from '../components/TeamSection'
+import SavingsCalculator from '../components/SavingsCalculator'
 
 export default function Home() {
   return (
@@ -75,21 +80,26 @@ export default function Home() {
         <main className="w-full space-y-16 pt-24 px-6 md:px-8 lg:px-12 mx-auto">
           <Hero />
           <TrustBanner />
+          <RetailCreditCrisisSection />
           <ProblemSection />
           <SolutionSection />
           <IndustriesSection />
           <HowItWorksSection />
           <TransactionFlowSection />
+          <TransactionFeeSection />
           <EcosystemSection />
           <ArchitectureSection />
           <FeaturesSection />
           <TrustIntelligenceSection />
           <TrustScoreSection />
-          <DashboardSection />
+          <SavingsCalculator />
+          {/* <DashboardSection /> */}
           <SecuritySection />
           <IntegrationsSection />
           <RoadmapSection />
           <AboutSection />
+          <TeamSection />
+          <PilotCTASection />
           <ContactSection />
         </main>
       </div>

@@ -42,8 +42,9 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
             <li><a href="#team" className="hover:text-white transition-colors">Team</a></li>
+            <li><a href="#pilot" className="hover:text-white transition-colors">Join Pilot</a></li>
+            <li><a href="#pilot" className="hover:text-white transition-colors">Invest</a></li>
             <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-            <li><a href="#investors" className="hover:text-white transition-colors">Investors</a></li>
           </ul>
         </div>
 
@@ -74,7 +75,7 @@ export default function Footer() {
       <div className="px-8 py-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between text-xs text-slate-600">
         <div className="flex items-center gap-1.5">
           <span>©</span>
-          <span>{currentYear} PayAssure Limited. All rights reserved.</span>
+          <span>{currentYear} PayAssure Technologies Limited. All rights reserved.</span>
         </div>
 
         <div className="flex items-center gap-5">
@@ -86,7 +87,7 @@ export default function Footer() {
         </div>
 
         <div className="text-slate-700">
-          Reg. No. · Nairobi, Kenya
+          Reg. No. PVT-RQ1K2JAY · Mombasa, Kenya
         </div>
       </div>
     </footer>

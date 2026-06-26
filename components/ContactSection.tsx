@@ -6,6 +6,7 @@ type FormState = {
   industry: string
   email: string
   phone: string
+  reason: string
   message: string
 }
 
@@ -16,12 +17,13 @@ export default function ContactSection() {
     industry: '',
     email: '',
     phone: '',
+    reason: 'General Inquiry',
     message: '',
   })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
-  const handleChange = (field: keyof FormState) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (field: keyof FormState) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((current) => ({ ...current, [field]: event.target.value }))
   }
 
@@ -43,7 +45,7 @@ export default function ContactSection() {
       }
 
       setStatus('success')
-      setForm({ name: '', company: '', industry: '', email: '', phone: '', message: '' })
+      setForm({ name: '', company: '', industry: '', email: '', phone: '', reason: 'General Inquiry', message: '' })
     } catch (error) {
       setStatus('error')
       setErrorMessage(error instanceof Error ? error.message : 'Unexpected error')
@@ -64,14 +66,14 @@ export default function ContactSection() {
 
             {/* Contact Info Cards */}
             <div className="space-y-3 pt-4">
-              <a href="mailto:hello@payassure.co.ke" className="flex items-center gap-4 p-4 rounded-lg border border-blue-200 bg-blue-50 hover:bg-blue-100 transition">
+              <a href="mailto:info@payassure.co.ke" className="flex items-center gap-4 p-4 rounded-lg border border-blue-200 bg-blue-50 hover:bg-blue-100 transition">
                 <div className="text-2xl">✉️</div>
                 <div>
                   <p className="text-sm font-semibold text-slate-950">Email</p>
                   <p className="text-sm text-blue-600">info@payassure.co.ke</p>
                 </div>
               </a>
-              <a href="tel:+254700000000" className="flex items-center gap-4 p-4 rounded-lg border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 transition">
+              <a href="https://wa.me/254791614036?text=hello%20PayAssure" className="flex items-center gap-4 p-4 rounded-lg border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 transition" target="_blank" rel="noopener noreferrer">
                 <div className="text-2xl">📱</div>
                 <div>
                   <p className="text-sm font-semibold text-slate-950">Phone</p>
@@ -149,17 +151,35 @@ export default function ContactSection() {
               </label>
             </div>
 
-            <label className="space-y-2 text-sm">
-              <span className="font-semibold text-slate-950">Phone *</span>
-              <input
-                type="tel"
-                placeholder="+254 700 000 000"
-                value={form.phone}
-                onChange={handleChange('phone')}
-                required
-                className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-              />
-            </label>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="space-y-2 text-sm">
+                <span className="font-semibold text-slate-950">Phone *</span>
+                <input
+                  type="tel"
+                  placeholder="+254 700 000 000"
+                  value={form.phone}
+                  onChange={handleChange('phone')}
+                  required
+                  className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                />
+              </label>
+
+              <label className="space-y-2 text-sm">
+                <span className="font-semibold text-slate-950">Reason for Contact *</span>
+                <select
+                  value={form.reason}
+                  onChange={handleChange('reason')}
+                  required
+                  className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                >
+                  <option value="Join the Pilot Program">Join the Pilot Program</option>
+                  <option value="Request a Demo">Request a Demo</option>
+                  <option value="Partnership Opportunity">Partnership Opportunity</option>
+                  <option value="Investment Inquiry">Investment Inquiry</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                </select>
+              </label>
+            </div>
 
             <label className="space-y-2 text-sm">
               <span className="font-semibold text-slate-950">Message *</span>

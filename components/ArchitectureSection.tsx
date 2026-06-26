@@ -46,7 +46,7 @@ export default function ArchitectureSection() {
         ))}
       </div>
 
-      <div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-8">
+      {/* <div className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-8">
         <p className="text-sm uppercase tracking-[0.3em] text-slate-600 font-semibold mb-4">Enterprise Grade</p>
         <div className="grid gap-6 sm:grid-cols-3">
           <div>
@@ -61,8 +61,8 @@ export default function ArchitectureSection() {
             <p className="font-semibold text-slate-900">Real-time Monitoring</p>
             <p className="text-sm text-gray-600 mt-1">24/7 operational oversight</p>
           </div>
-        </div>
-      </div>
+        </div> 
+      </div>*/}
     </section>
   )
 }

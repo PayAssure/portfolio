@@ -7,6 +7,7 @@ export type ContactFormData = {
   industry: string
   email: string
   phone: string
+  reason: string
   message: string
 }
 
@@ -56,21 +57,8 @@ export async function sendContactEmails(formData: ContactFormData) {
     attachments,
   }
 
-  console.info('Sending company email to', companyMail.to, 'via SMTP host', smtpConfig.host)
-
   const companyResult = await transporter.sendMail(companyMail)
-  console.info('Company email send result:', {
-    accepted: companyResult.accepted,
-    rejected: companyResult.rejected,
-    messageId: companyResult.messageId,
-  })
-
   const clientResult = await transporter.sendMail(clientMail)
-  console.info('Client email send result:', {
-    accepted: clientResult.accepted,
-    rejected: clientResult.rejected,
-    messageId: clientResult.messageId,
-  })
 
   return {
     companyResult: {

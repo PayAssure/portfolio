@@ -4,6 +4,7 @@ export function companyNotificationTemplate(formData: {
   industry: string
   email: string
   phone: string
+  reason: string
   message: string
 }) {
   const inquiryId = `PA-${new Date().getFullYear()}${String(new Date().getMonth() + 1).padStart(2, '0')}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`
@@ -31,11 +32,13 @@ export function companyNotificationTemplate(formData: {
                   <td style="padding:40px;">
                     <div style="display:inline-block;background:#dcfce7;color:#166534;padding:8px 16px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.5px;">✓ NEW WEBSITE INQUIRY</div>
                     <h1 style="margin:24px 0 24px;font-size:34px;line-height:1.2;color:#0f172a;">From <span style="color:#1E4ED8;">${formData.name}</span></h1>
-                    <p style="font-size:16px;line-height:1.9;color:#475569;margin:0 0 20px;"><strong>Company:</strong> ${formData.company}</p>
-                    <p style="font-size:16px;line-height:1.9;color:#475569;margin:0 0 20px;"><strong>Industry:</strong> ${formData.industry}</p>
+                    <p style="font-size:16px;line-height:1.9;color:#475569;margin:0 0 12px;"><strong>Company:</strong> ${formData.company}</p>
+                    <p style="font-size:16px;line-height:1.9;color:#475569;margin:0 0 12px;"><strong>Industry:</strong> ${formData.industry}</p>
+                    <p style="font-size:16px;line-height:1.9;color:#475569;margin:0 0 12px;"><strong>Reason:</strong> ${formData.reason}</p>
                     <p style="font-size:16px;line-height:1.9;color:#475569;margin:0;"><strong>Message:</strong><br />${formData.message.replace(/\n/g, '<br />')}</p>
                   </td>
                 </tr>
+              
                 <tr>
                   <td style="padding:0 40px 40px;">
                     <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:20px;">
@@ -102,6 +105,7 @@ export function clientConfirmationTemplate(formData: {
   industry: string
   email: string
   phone: string
+  reason: string
   message: string
 }) {
   const inquiryId = `PA-${new Date().getFullYear()}${String(new Date().getMonth() + 1).padStart(2, '0')}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`
@@ -129,7 +133,8 @@ export function clientConfirmationTemplate(formData: {
                   <td style="padding:40px;">
                     <div style="display:inline-block;background:#dbeafe;color:#1e40af;padding:8px 16px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.5px;">✓ INQUIRY RECEIVED</div>
                     <h1 style="margin:24px 0 24px;font-size:34px;line-height:1.2;color:#0f172a;">Hello <span style="color:#1E4ED8;">${formData.name}</span>,</h1>
-                    <p style="font-size:16px;line-height:1.9;color:#475569;margin:0 0 20px;">Thank you for contacting PayAssure. We have received your message and will review it shortly.</p>
+                    <p style="font-size:16px;line-height:1.9;color:#475569;margin:0 0 12px;">Thank you for contacting PayAssure. We have received your message and will review it shortly.</p>
+                    <p style="font-size:16px;line-height:1.9;color:#475569;margin:0 0 12px;"><strong>Reason:</strong> ${formData.reason}</p>
                     <p style="font-size:16px;line-height:1.9;color:#475569;margin:0;">PayAssure is building financial infrastructure that enables trusted settlements, intelligent reconciliation, and stronger financial visibility across modern supply chains.</p>
                   </td>
                 </tr>
@@ -154,6 +159,7 @@ export function clientConfirmationTemplate(formData: {
                     </div>
                   </td>
                 </tr>
+                
                 <tr>
                   <td style="padding:0 40px 40px;">
                     <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:24px;">
