@@ -2,12 +2,13 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 const navItems = [
+  { label: 'Home', href: '/' },
   { label: 'Problem', href: '#problem' },
   { label: 'Solution', href: '#solution' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Features', href: '#features' },
   { label: 'Industries', href: '#industries' },
-  { label: 'Invest', href: '#pilot' },
+  { label: 'Investors', href: '/investors' },
   { label: 'Join Pilot', href: '#pilot' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -34,7 +35,7 @@ export default function Header() {
             </Link>
           ))}
           <Link href="#contact" className="rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700">
-            Talk To Us
+            Join the Free 90-Day Pilot
           </Link>
         </div>
 
@@ -54,7 +55,7 @@ export default function Header() {
               </a>
             ))}
             <a href="#contact" className="block rounded-2xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700">
-              Talk To Us
+              Join the Free 90-Day Pilot
             </a>
           </div>
         </div>

@@ -14,6 +14,9 @@ export default function PilotCTASection() {
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <div className="flex items-center gap-3 text-2xl">🚀</div>
             <h3 className="mt-4 text-2xl font-semibold text-slate-950">Pilot Customers</h3>
+            <div className="mt-2">
+              <span className="inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-sm font-semibold text-amber-700 border border-amber-100">First 10 manufacturers only</span>
+            </div>
             <p className="mt-3 text-sm leading-7 text-slate-600">
               Join our free 90-day pilot program and help shape the future of automated settlements.
             </p>

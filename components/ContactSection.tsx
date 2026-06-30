@@ -73,13 +73,30 @@ export default function ContactSection() {
                   <p className="text-sm text-blue-600">info@payassure.co.ke</p>
                 </div>
               </a>
-              <a href="https://wa.me/254791614036?text=hello%20PayAssure" className="flex items-center gap-4 p-4 rounded-lg border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 transition" target="_blank" rel="noopener noreferrer">
-                <div className="text-2xl">📱</div>
-                <div>
-                  <p className="text-sm font-semibold text-slate-950">Phone</p>
-                  <p className="text-sm text-emerald-600">+254 791614036</p>
-                </div>
-              </a>
+
+              {/* Two-column phone contacts on md+, single column on mobile */}
+              <div className="grid gap-3 md:grid-cols-2">
+                <a href="https://wa.me/254748595539?text=hello%20PayAssure" className="flex items-center gap-4 p-4 rounded-lg border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 transition" target="_blank" rel="noopener noreferrer">
+                  <div className="text-2xl">📞</div>
+                  <div className="text-2xl">📱</div>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-950">CEO</p>
+                    <p className="text-sm text-emerald-600">+254 748 595 539</p>
+                  </div>
+                </a>
+                <a href="https://wa.me/254791614036?text=hello%20PayAssure" className="flex items-center gap-4 p-4 rounded-lg border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 transition" target="_blank" rel="noopener noreferrer">
+                  <div className="text-2xl">📞</div>
+                  <div className="text-2xl">📱</div>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-950">CTO</p>
+                    <p className="text-sm text-emerald-600">+254 791 614 036</p>
+                  </div>
+                </a>
+
+
+              </div>
+
+
               <div className="flex items-center gap-4 p-4 rounded-lg border border-purple-200 bg-purple-50">
                 <div className="text-2xl">📍</div>
                 <div>

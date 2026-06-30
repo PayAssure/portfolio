@@ -66,7 +66,15 @@ export default function TeamSection() {
             <div key={member.email} className="group overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-blue-200 hover:shadow-md">
               <div className="flex flex-col gap-6 p-6 sm:p-8">
                 <div className="flex items-center gap-4">
-                  <img src={member.image} alt={`${member.name} profile`} className="h-16 w-16 rounded-2xl object-cover bg-slate-200" />
+                  {member.image && !member.image.toLowerCase().includes('logo') ? (
+                    <img src={member.image} alt={`${member.name} profile`} className="h-16 w-16 rounded-2xl object-cover bg-slate-200" />
+                  ) : (
+                    <div className="h-16 w-16 rounded-2xl bg-blue-600 flex items-center justify-center text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5.121 17.804A7 7 0 0112 15a7 7 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                  )}
                   <div>
                     <h3 className="text-xl font-semibold text-slate-950">{member.name}</h3>
                     <p className="text-sm font-medium text-blue-600">{member.role}</p>

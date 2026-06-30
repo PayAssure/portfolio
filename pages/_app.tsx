@@ -20,13 +20,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [])
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="pt-2">
+      <main className="flex-grow pt-20 md:pt-24">
         <Component {...pageProps} />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
