@@ -24,7 +24,7 @@ const teamMembers: TeamMember[] = [
     email: 'kimaniwilfred95@gmail.com',
     phone: '+254791614036',
     bio: 'Leads the company’s technology strategy and product development, designing secure, scalable financial systems and overseeing the engineering of PayAssure’s payment and settlement platform.',
-    image: '/wilfred.jpeg',
+    image: '/wilfred.png',
   },
   {
     name: 'Simon Amani Tunje',
@@ -40,7 +40,7 @@ const teamMembers: TeamMember[] = [
     email: 'esthersidi7@gmail.com',
     phone: '+254710 944 354',
     bio: 'Supports business planning and operational strategy, contributing insights that strengthen product direction, stakeholder engagement, and organizational development.',
-    image: '/logo.png',
+    image: '/esther.jpeg',
   },
 ]
 
