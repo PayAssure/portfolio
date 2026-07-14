@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start lg:gap-12">
+    <section className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
       <div className="space-y-5 sm:space-y-6">
         <p className="text-xs sm:text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">Investor Briefing</p>
         <h1 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl md:text-5xl">Building the financial infrastructure for Africa&apos;s supply chains.</h1>

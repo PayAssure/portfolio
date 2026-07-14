@@ -7,14 +7,14 @@ const marketCards = [
 
 export default function MarketSection() {
   return (
-    <section id="market" className="mt-16 grid gap-8 sm:mt-20 lg:mt-24 lg:grid-cols-[0.85fr_1.1fr] lg:gap-12">
-      <div className="space-y-5 sm:space-y-6">
+    <section id="market" className="mt-16 sm:mt-20 lg:mt-24">
+      <div className="space-y-5 sm:space-y-6 mb-8">
         <p className="text-xs sm:text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">Market Opportunity</p>
         <h2 className="text-2xl font-bold text-slate-950 sm:text-3xl">A large, underserved market across East Africa and beyond.</h2>
         <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">We are targeting the payment and settlement flows that connect manufacturers, distributors, retailers, ERP providers and financial institutions in East Africa, with broader expansion across Africa as the network scales.</p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
         {marketCards.map((card) => (
           <div key={card.label} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6">
             <p className="text-xs uppercase tracking-[0.25em] text-slate-500 font-semibold">{card.label}</p>

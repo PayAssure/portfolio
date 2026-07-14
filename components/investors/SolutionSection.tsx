@@ -1,14 +1,13 @@
 export default function SolutionSection() {
   return (
     <section id="solution" className="mt-16 sm:mt-20 lg:mt-24">
-      <div className="grid gap-8 lg:grid-cols-[1.25fr_0.85fr] lg:items-start lg:gap-12">
-        <div className="space-y-5 sm:space-y-6">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">Our Solution</p>
-          <h2 className="text-2xl font-bold text-slate-950 sm:text-3xl">Middleware for settlement orchestration, not another ERP.</h2>
-          <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">PayAssure sits between retailers, suppliers, ERPs, banks and payment rails to orchestrate every transaction, execute settlement, and continuously reconcile cash flow.</p>
-        </div>
+      <div className="space-y-5 sm:space-y-6 mb-8">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">Our Solution</p>
+        <h2 className="text-2xl font-bold text-slate-950 sm:text-3xl">Middleware for settlement orchestration, not another ERP.</h2>
+        <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">PayAssure sits between retailers, suppliers, ERPs, banks and payment rails to orchestrate every transaction, execute settlement, and continuously reconcile cash flow.</p>
+      </div>
 
-        <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6 shadow-sm sm:rounded-[2rem] sm:p-8">
+      <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-6 shadow-sm sm:rounded-[2rem] sm:p-8">
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.25em] text-slate-500 font-semibold">Architecture</div>
 
@@ -25,8 +24,7 @@ export default function SolutionSection() {
               </div>
             </div>
 
-            <p className="text-sm leading-7 text-slate-600">PayAssure connects ERP systems, payment providers and financial institutions in a single settlement workflow that is audit-ready and configurable.</p>
-          </div>
+          <p className="text-sm leading-7 text-slate-600">PayAssure connects ERP systems, payment providers and financial institutions in a single settlement workflow that is audit-ready and configurable.</p>
         </div>
       </div>
     </section>
