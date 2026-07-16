@@ -24,6 +24,7 @@ import ContactSection from '../components/ContactSection'
 import PilotCTASection from '../components/PilotCTASection'
 import TeamSection from '../components/TeamSection'
 import SavingsCalculator from '../components/SavingsCalculator'
+import SurveysSection from '../components/SurveysSection'
 
 export default function Home() {
   return (
@@ -100,6 +101,7 @@ export default function Home() {
           <AboutSection />
           <TeamSection />
           <PilotCTASection />
+          <SurveysSection />
           <ContactSection />
         </main>
       </div>
