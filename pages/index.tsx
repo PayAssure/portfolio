@@ -75,7 +75,45 @@ export default function Home() {
         {/* Additional SEO tags */}
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://payassure.co.ke/",
+          "name": "PayAssure",
+          "description": "PayAssure provides real-time supply chain financial intelligence and trade finance solutions across Africa.",
+          "publisher": {
+            "@type": "Organization",
+            "name": "PayAssure",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://payassure.co.ke/logo.png"
+            }
+          }
+        }) }} />
       </Head>
+
+      {/* Structured data: Organization + WebSite */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Organization',
+            '@id': 'https://payassure.co.ke/#organization',
+            'name': 'PayAssure',
+            'url': 'https://payassure.co.ke/',
+            'logo': 'https://payassure.co.ke/logo.png',
+            'sameAs': []
+          },
+          {
+            '@type': 'WebSite',
+            '@id': 'https://payassure.co.ke/#website',
+            'url': 'https://payassure.co.ke/',
+            'name': 'PayAssure',
+            'publisher': { '@id': 'https://payassure.co.ke/#organization' }
+          }
+        ]
+      }) }} />
 
       <div className="w-full min-h-screen bg-white text-slate-900">
         <Header />

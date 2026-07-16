@@ -1,27 +1,10 @@
-# Allow all robots
 User-agent: *
-Allow: /
-
-# Specific directives for major search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /_next/
 
-# Sitemap location
+# Allow everything else
+Allow: /
+
+# Sitemap
 Sitemap: https://payassure.co.ke/sitemap.xml
-Sitemap: https://payassure.netlify.app/sitemap.xml
-
-
-
-# Crawl delay
-Crawl-delay: 1
