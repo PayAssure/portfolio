@@ -31,89 +31,101 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>PayAssure — Supply Chain Financial Intelligence | Real-Time Trade Finance</title>
-        <meta name="description" content="PayAssure provides real-time supply chain financial intelligence and trade finance solutions. Get trust scores, reduce payment risks, and accelerate cash flow with our AI-powered platform." />
-        <meta name="keywords" content="supply chain finance, trade finance, financial intelligence, trust score, payment intelligence, supply chain risk, cash flow management, trade credit, supply chain optimization, B2B payments, financial technology, fintech, supply chain management, supply chain visibility, payment automation, trade finance platform, credit intelligence, supplier financing, working capital, invoice financing" />
+        <title>PayAssure | Payment Orchestration & Settlement Platform for African Businesses</title>
+        <meta name="description" content="PayAssure is a payment orchestration and settlement platform that automates supplier payments, transaction reconciliation, payment routing, and financial workflows for businesses across Africa." />
+        <meta name="keywords" content="payment orchestration, settlement platform, settlement engine, automated supplier payments, payment routing, payment reconciliation, merchant settlements, financial infrastructure, business payment automation, ERP payment integration, POS integration, B2B payments Africa, payment APIs, cashflow automation, supplier settlement, multi-party payments, working capital automation, fintech Africa" />
         <meta name="author" content="PayAssure" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://payassure.co.ke/" />
-        <meta property="og:title" content="PayAssure — Supply Chain Financial Intelligence" />
-        <meta property="og:description" content="Real-time supply chain financial intelligence and trade finance solutions for modern enterprises." />
+        <meta property="og:title" content="PayAssure | Payment Orchestration Platform for Africa" />
+        <meta property="og:description" content="Automate supplier settlements, payment routing, reconciliation, and cashflow management with PayAssure." />
         <meta property="og:image" content="https://payassure.co.ke/og-image.png" />
         <meta property="og:site_name" content="PayAssure" />
         <meta property="og:locale" content="en_US" />
-        
+
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://payassure.co.ke/" />
-        <meta property="twitter:title" content="PayAssure — Supply Chain Financial Intelligence" />
-        <meta property="twitter:description" content="Real-time supply chain financial intelligence and trade finance solutions for modern enterprises." />
+        <meta property="twitter:title" content="PayAssure | Payment Orchestration Platform for Africa" />
+        <meta property="twitter:description" content="Automate supplier settlements, payment routing, reconciliation, and cashflow management with PayAssure." />
         <meta property="twitter:image" content="https://payassure.co.ke/twitter-image.png" />
-        
-        {/* LinkedIn */}
-        <meta property="linkedin:title" content="PayAssure — Supply Chain Financial Intelligence" />
-        <meta property="linkedin:description" content="Real-time supply chain financial intelligence and trade finance solutions for modern enterprises." />
-        
+
         {/* Canonical URL */}
         <link rel="canonical" href="https://payassure.co.ke/" />
-        
+
         {/* Favicon */}
         <link rel="icon" type="image/png" href="/logo.png" />
         <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        
+
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+
         {/* Additional SEO tags */}
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
 
+        {/* Rich JSON-LD: Organization, SoftwareApplication, WebSite, BreadcrumbList, FAQPage */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "WebSite",
-          "url": "https://payassure.co.ke/",
-          "name": "PayAssure",
-          "description": "PayAssure provides real-time supply chain financial intelligence and trade finance solutions across Africa.",
-          "publisher": {
-            "@type": "Organization",
-            "name": "PayAssure",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://payassure.co.ke/logo.png"
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://payassure.co.ke/#organization",
+              "name": "PayAssure",
+              "url": "https://payassure.co.ke",
+              "logo": "https://payassure.co.ke/logo.png",
+              "description": "PayAssure is a payment orchestration and settlement platform that automates supplier payments and reconciliation across Africa.",
+              "foundingLocation": { "@type": "Place", "name": "Kenya" },
+              "contactPoint": [{ "@type": "ContactPoint", "telephone": "+254748595539", "contactType": "Sales" }],
+              "sameAs": ["https://www.linkedin.com/company/payassure"]
+            },
+            {
+              "@type": "SoftwareApplication",
+              "@id": "https://payassure.co.ke/#software",
+              "name": "PayAssure",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Web",
+              "url": "https://payassure.co.ke",
+              "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KES" }
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://payassure.co.ke/#website",
+              "url": "https://payassure.co.ke/",
+              "name": "PayAssure",
+              "publisher": { "@id": "https://payassure.co.ke/#organization" }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://payassure.co.ke/" }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is PayAssure?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "PayAssure is a payment orchestration and settlement platform that automates supplier payments, reconciliation, and financial workflows for businesses." }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Who is PayAssure for?",
+                  "acceptedAnswer": { "@type": "Answer", "text": "Retailers, suppliers, manufacturers, financial institutions, and ERP/POS providers across Africa looking to automate settlements and reconciliation." }
+                }
+              ]
             }
-          }
+          ]
         }) }} />
       </Head>
-
-      {/* Structured data: Organization + WebSite */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@graph': [
-          {
-            '@type': 'Organization',
-            '@id': 'https://payassure.co.ke/#organization',
-            'name': 'PayAssure',
-            'url': 'https://payassure.co.ke/',
-            'logo': 'https://payassure.co.ke/logo.png',
-            'sameAs': []
-          },
-          {
-            '@type': 'WebSite',
-            '@id': 'https://payassure.co.ke/#website',
-            'url': 'https://payassure.co.ke/',
-            'name': 'PayAssure',
-            'publisher': { '@id': 'https://payassure.co.ke/#organization' }
-          }
-        ]
-      }) }} />
 
       <div className="w-full min-h-screen bg-white text-slate-900">
         <Header />
