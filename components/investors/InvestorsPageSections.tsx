@@ -1,5 +1,5 @@
 import HeroSection from './HeroSection'
-import ProblemSection from './ProblemSection'
+import StoryBehindPayassure from './StoryBehindPayassure'
 import SolutionSection from './SolutionSection'
 import MarketSection from './MarketSection'
 import WhyNowSection from './WhyNowSection'
@@ -25,7 +25,7 @@ export default function InvestorsPageSections() {
   return (
     <>
       <HeroSection />
-      <ProblemSection />
+      <StoryBehindPayassure />
       <KenyaMarketNarrativeSection />
       <SolutionSection />
       <MarketSection />

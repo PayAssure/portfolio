@@ -40,7 +40,9 @@ export default function InvestorResourcesSection() {
               </ul>
 
               <a
-                href="#contact"
+                href="https://wa.me/254748595539?text=Hello%20Austine%2C%20I%20would%20like%20to%20request%20the%20investor%20deck"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex w-full items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
               >
                 📥 Request Deck
@@ -80,7 +82,9 @@ export default function InvestorResourcesSection() {
               </ul>
 
               <a
-                href="#contact"
+                href="https://wa.me/254748595539?text=Hello%20Austine%2C%20I%20would%20like%20to%20watch%20the%20founder%20video"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
               >
                 📹 Watch Video

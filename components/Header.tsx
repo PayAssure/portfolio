@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -15,6 +16,22 @@ const navItems = [
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const router = useRouter()
+
+  const handleHashLink = (href: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!href.startsWith('#')) return
+    event.preventDefault()
+
+    const targetId = href.slice(1)
+    const targetEl = typeof document !== 'undefined' ? document.getElementById(targetId) : null
+
+    if (targetEl) {
+      window.location.hash = href
+      return
+    }
+
+    router.push(`/${href}`)
+  }
 
   return (
     <header className="w-full fixed inset-x-0 top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur-xl shadow-sm">
@@ -30,13 +47,19 @@ export default function Header() {
 
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm font-medium text-slate-700 hover:text-slate-950 transition">
-              {item.label}
-            </Link>
+            item.href.startsWith('#') ? (
+              <a key={item.href} href={item.href} onClick={handleHashLink(item.href)} className="text-sm font-medium text-slate-700 hover:text-slate-950 transition">
+                {item.label}
+              </a>
+            ) : (
+              <Link key={item.href} href={item.href} className="text-sm font-medium text-slate-700 hover:text-slate-950 transition">
+                {item.label}
+              </Link>
+            )
           ))}
-          <Link href="#contact" className="rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700">
+          <a href="#contact" onClick={handleHashLink('#contact')} className="rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700">
             Join the Free 90-Day Pilot
-          </Link>
+          </a>
         </div>
 
         <button onClick={() => setOpen(!open)} className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-100 md:hidden">
@@ -49,12 +72,18 @@ export default function Header() {
       {open && (
         <div className="border-t border-slate-200 bg-white md:hidden">
           <div className="space-y-2 px-6 py-4">
-            {navItems.map((item) => (
-              <a key={item.href} href={item.href} className="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100">
-                {item.label}
-              </a>
+              {navItems.map((item) => (
+              item.href.startsWith('#') ? (
+                <a key={item.href} href={item.href} onClick={handleHashLink(item.href)} className="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100">
+                  {item.label}
+                </a>
+              ) : (
+                <Link key={item.href} href={item.href} className="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100">
+                  {item.label}
+                </Link>
+              )
             ))}
-            <a href="#contact" className="block rounded-2xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700">
+            <a href="#contact" onClick={handleHashLink('#contact')} className="block rounded-2xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700">
               Join the Free 90-Day Pilot
             </a>
           </div>

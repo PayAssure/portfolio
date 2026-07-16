@@ -10,19 +10,28 @@ const problems = [
 export default function ProblemSection() {
   return (
     <section id="problem" className="mt-16 sm:mt-20 lg:mt-24">
-      <div className="space-y-8">
-        <div className="space-y-5 sm:space-y-6 w-full">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">The Problem</p>
-          <h2 className="text-2xl font-bold text-slate-950 sm:text-3xl">Enterprise payments are stuck in manual, disconnected processes.</h2>
-          <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">Retailers, suppliers and financial institutions struggle with slow settlement cycles, poor visibility, and fragmented reconciliation. That creates expensive capital requirements and leaves trade finance underutilized.</p>
-        </div>
+      <div className="mx-auto">
+        <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">The Story Behind PayAssure</p>
+          <h2 className="mt-4 text-2xl font-bold text-slate-950 sm:text-3xl text-center">Why this company needs to exist</h2>
 
-        <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
-          {problems.map((item) => (
-            <div key={item} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6">
-              <p className="text-sm font-semibold text-slate-900">{item}</p>
-            </div>
-          ))}
+          <div className="prose prose-sm max-w-none text-slate-700 mt-6">
+            <p>
+              Every day, businesses across Africa receive millions of customer payments. Yet many of these same businesses struggle to pay suppliers on time, maintain healthy cash flow, and grow without relying on expensive short-term financing.
+            </p>
+
+            <p>
+              The challenge isn't always a lack of revenue. It's what happens after a payment is received. Customer payments intended for suppliers, operating expenses, inventory, and business growth are often pooled into a single account. As daily expenses accumulate, businesses lose visibility into what belongs to whom. By the time suppliers expect payment, the funds have often been used elsewhere.
+            </p>
+
+            <p>
+              The result is delayed settlements, strained supplier relationships, manual reconciliation, cash flow pressure, and an increasing dependence on working capital loans. Financial institutions have responded by creating more lending products to finance these gaps.
+            </p>
+
+            <p className="font-semibold">
+              We believe there is a better approach. Instead of financing broken payment flows, businesses should have infrastructure that allocates money correctly from the moment a customer pays. That's why we built PayAssure.
+            </p>
+          </div>
         </div>
       </div>
     </section>

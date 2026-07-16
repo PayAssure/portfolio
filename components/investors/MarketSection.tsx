@@ -10,8 +10,8 @@ export default function MarketSection() {
     <section id="market" className="mt-16 sm:mt-20 lg:mt-24">
       <div className="space-y-5 sm:space-y-6 mb-8">
         <p className="text-xs sm:text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">Market Opportunity</p>
-        <h2 className="text-2xl font-bold text-slate-950 sm:text-3xl">A large, underserved market across East Africa and beyond.</h2>
-        <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">We are targeting the payment and settlement flows that connect manufacturers, distributors, retailers, ERP providers and financial institutions in East Africa, with broader expansion across Africa as the network scales.</p>
+        <h2 className="text-2xl font-bold text-slate-950 sm:text-3xl">Across Africa, payments are collected — but money allocation remains broken.</h2>
+        <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">Across Africa, businesses process billions of shillings in payments every day. Yet supplier payments remain delayed, reconciliation is largely manual, and working capital is tied up in inefficient financial processes. These structural frictions create a large, addressable opportunity for a settlement-first infrastructure layer.</p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">

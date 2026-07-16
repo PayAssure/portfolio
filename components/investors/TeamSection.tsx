@@ -5,7 +5,7 @@ const teamMembers = [
     credentials: [
       'Business Strategy & Partnerships',
       'Go-to-Market Leadership',
-      'UNESCO Youth Winner 2024',
+      'business development and enterprise sales',
       'Millennium Fellow 2026',
     ],
     description: 'Leads business strategy, partnerships and go-to-market expansion. Deep experience in enterprise sales, trade finance distribution and African commerce ecosystems.',

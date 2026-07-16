@@ -3,11 +3,11 @@ export default function HeroSection() {
     <section className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-12">
       <div className="space-y-5 sm:space-y-6">
         <p className="text-xs sm:text-sm uppercase tracking-[0.32em] text-blue-600 font-semibold">Investor Briefing</p>
-        <h1 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl md:text-5xl">Building the financial infrastructure for Africa&apos;s supply chains.</h1>
-        <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">PayAssure is developing payment orchestration and settlement infrastructure that enables retailers, suppliers, financial institutions, and ERP providers to automate transactions, reconciliations, and working capital across Africa.</p>
+        <h1 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl md:text-5xl">Businesses don't have a payment problem. They have a money allocation problem.</h1>
+        <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">PayAssure is building the financial infrastructure that automatically allocates, settles, and reconciles every transaction across Africa's supply chains.</p>
         <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <a href="mailto:info@payassure.co.ke?subject=Investor%20Deck%20Request" className="inline-flex items-center justify-center rounded-full bg-blue-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700">Request Investor Deck</a>
-          <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50">Schedule a Meeting</a>
+          <a href="https://wa.me/254748595539?text=Hello%20Austine%2C%20I%20would%20like%20to%20request%20the%20investor%20deck" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-blue-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700">Request Investor Deck</a>
+          <a href="https://wa.me/254748595539?text=Hello%20Austine%2C%20I%20would%20like%20to%20schedule%20a%20meeting" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50">Schedule a Meeting</a>
         </div>
       </div>
 
