@@ -1,31 +1,40 @@
-const projectionData = [
-  {
-    year: 'Year 1',
-    customers: '10',
-    transactions: '500',
-    revenue: 'KES 2.4M',
-    details: 'Early pilots, manual integrations',
-  },
-  {
-    year: 'Year 2',
-    customers: '50',
-    transactions: '5,000',
-    revenue: 'KES 28.8M',
-    details: 'API automation, channel expansion',
-  },
-  {
-    year: 'Year 3',
-    customers: '250',
-    transactions: '25,000',
-    revenue: 'KES 168M',
-    details: 'Platform scaling, partnership network',
-  },
-]
+const AVG_SETTLEMENT_VALUE = 400_000 // KES per transaction
+const PLATFORM_FEE_PERCENT = 0.8 // percent
+const PLATFORM_FEE = PLATFORM_FEE_PERCENT / 100
+const SUBSCRIPTION_MONTHLY_AVG = 12_500 // midpoint KES per customer/month
+
+const CUSTOMERS_BY_YEAR = [10, 50, 250]
+const MONTHLY_TX_PER_CUSTOMER = [50, 100, 100]
+
+function formatKES(n: number) {
+  if (n >= 1_000_000_000) return `KES ${(n / 1_000_000_000).toFixed(1)}B`
+  if (n >= 1_000_000) return `KES ${(n / 1_000_000).toFixed(1)}M`
+  if (n >= 1_000) return `KES ${(n / 1_000).toFixed(1)}K`
+  return `KES ${n}`
+}
+
+const projectionData = CUSTOMERS_BY_YEAR.map((customers, i) => {
+  const monthlyTxPerCustomer = MONTHLY_TX_PER_CUSTOMER[i]
+  const monthlyTransactions = customers * monthlyTxPerCustomer
+  const annualTransactions = monthlyTransactions * 12
+  const perTransactionFee = Math.round(AVG_SETTLEMENT_VALUE * PLATFORM_FEE)
+  const transactionRevenue = perTransactionFee * annualTransactions
+  const subscriptionRevenue = customers * SUBSCRIPTION_MONTHLY_AVG * 12
+  const totalRevenue = transactionRevenue + subscriptionRevenue
+
+  return {
+    year: `Year ${i + 1}`,
+    customers: String(customers),
+    transactions: String(monthlyTransactions),
+    revenue: formatKES(totalRevenue),
+    details: `${formatKES(transactionRevenue)} transaction fees; ${formatKES(subscriptionRevenue)} subscriptions`,
+  }
+})
 
 const assumptions = [
   { category: 'Average Settlement Value', value: 'KES 400,000 per transaction' },
-  { category: 'Platform Fee (settlement)', value: '0.3% of transaction value' },
-  { category: 'Subscription Fee', value: 'KES 5,000-20,000 per customer/month based on tier' },
+  { category: 'Platform Fee (settlement)', value: '0.8% of transaction value' },
+  { category: 'Subscription Fee', value: 'KES 5,000-20,000 per customer/month based on tier (avg KES 12,500 used)' },
   { category: 'API Usage Fee', value: 'KES 0.50-1.00 per API call for enterprise integrations' },
   { category: 'Monthly Transactions per Customer (Y1)', value: '50 transactions (manual pilot phase)' },
   { category: 'Monthly Transactions per Customer (Y2)', value: '100 transactions (API integration)' },
