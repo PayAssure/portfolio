@@ -55,7 +55,7 @@ export default function Investors() {
       }) }} />
 
       <div className="w-full min-h-screen bg-white text-slate-900">
-        <main className="w-full px-5 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24">
+        <main className="w-full px-5 py-16 sm:px-6 sm:py-8 md:px-8 md:py-8">
           <InvestorsPageSections />
         </main>
       </div>
