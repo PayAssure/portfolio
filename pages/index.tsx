@@ -129,7 +129,7 @@ export default function Home() {
 
       <div className="w-full min-h-screen bg-white text-slate-900">
         <Header />
-        <main className="w-full space-y-16 pt-24 px-6 md:px-8 lg:px-12 mx-auto">
+        <main className="w-full space-y-16 pt-1 px-6 md:px-8 lg:px-12 mx-auto">
           <Hero />
           <StoryHomeSection />
           <TrustBanner />
