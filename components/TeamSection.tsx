@@ -12,7 +12,7 @@ type TeamMember = {
 const teamMembers: TeamMember[] = [
   {
     name: 'Austine Jefwa Katsinye',
-    role: 'CEO & Founder',
+    role: 'CHIEF EXECUTIVE OFFICER',
     email: 'austinejefwa09@gmail.com',
     phone: '+254748 595 539',
     bio: 'Leads PayAssure’s vision, business strategy, and partnerships, focusing on building financial infrastructure that helps manufacturers, distributors, and retailers streamline settlements and reduce credit risk.',
@@ -20,7 +20,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: 'Wilfred Mwaura Kimani',
-    role: 'CTO & Co-Founder',
+    role: 'CHIEF TECHNOLOGY OFFICER',
     email: 'kimaniwilfred95@gmail.com',
     phone: '+254791614036',
     bio: 'Leads the company’s technology strategy and product development, designing secure, scalable financial systems and overseeing the engineering of PayAssure’s payment and settlement platform.',
@@ -61,45 +61,47 @@ export default function TeamSection() {
           <p className="mt-4 text-gray-600 leading-7 max-w-2xl">A lean leadership team guiding PayAssure’s product, technology, and market strategy with a focus on reliable finance operations for supply chain participants.</p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 xl:grid-cols-2">
           {teamMembers.map((member) => (
             <div key={member.email} className="group overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-blue-200 hover:shadow-md">
-              <div className="flex flex-col gap-6 p-6 sm:p-8">
-                <div className="flex items-center gap-4">
+              <div className="grid h-full grid-cols-1 sm:grid-cols-[minmax(0,0.4fr)_minmax(0,1.6fr)]">
+                <div className="relative h-56 bg-slate-200 sm:h-auto sm:min-h-0">
                   {member.image && !member.image.toLowerCase().includes('logo') ? (
-                    <img src={member.image} alt={`${member.name} profile`} className="h-16 w-16 rounded-2xl object-cover bg-slate-200" />
+                    <img src={member.image} alt={`${member.name} profile`} className="absolute inset-0 h-full w-full object-cover" />
                   ) : (
-                    <div className="h-16 w-16 rounded-2xl bg-blue-600 flex items-center justify-center text-white">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                    <div className="absolute inset-0 flex h-full w-full items-center justify-center bg-blue-600 text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5.121 17.804A7 7 0 0112 15a7 7 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
                   )}
+                </div>
+                <div className="flex min-w-0 flex-col justify-center gap-5 p-6 sm:p-8">
                   <div>
                     <h3 className="text-xl font-semibold text-slate-950">{member.name}</h3>
                     <p className="text-sm font-medium text-blue-600">{member.role}</p>
                   </div>
-                </div>
 
-                <p className="text-sm leading-7 text-slate-600">{member.bio}</p>
+                  <p className="text-sm leading-7 text-slate-600">{member.bio}</p>
 
-                <div className="grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
-                  <a
-                    href={`mailto:${member.email}`}
-                    className="inline-flex w-full items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 transition hover:border-blue-200 hover:bg-blue-50"
-                  >
-                    <span>✉</span>
-                    <span>{member.email}</span>
-                  </a>
-                  <a
-                    href={getWhatsAppLink(member.phone, member.name)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex w-full items-center gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-900 transition hover:border-emerald-300 hover:bg-emerald-100"
-                  >
-                    <span>💬</span>
-                    <span>WhatsApp: {member.phone}</span>
-                  </a>
+                  <div className="grid grid-cols-1 gap-3 text-sm">
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="inline-flex w-full items-center gap-2 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 transition hover:border-blue-200 hover:bg-blue-50"
+                    >
+                      <span>✉</span>
+                      <span className="min-w-0 break-all">{member.email}</span>
+                    </a>
+                    <a
+                      href={getWhatsAppLink(member.phone, member.name)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center gap-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-900 transition hover:border-emerald-300 hover:bg-emerald-100"
+                    >
+                      <span>💬</span>
+                      <span className="min-w-0 break-words">WhatsApp: {member.phone}</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
